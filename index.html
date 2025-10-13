@@ -1,66 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deepak Dubey — Builder & Thinker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="page">
+      <div class="brand-mark" aria-hidden="true">
+        <span>D</span>
+      </div>
 
-<title>Gopal Portfolio</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#fff1f2">
-<link rel="canonical" href="https://gopalmai.github.io/">
-<meta name="description" content="Gopal's personal website">
-<meta name="keywords" content="personal,website,blog,article">
+      <header class="hero">
+        <h1>
+          <span class="intro"
+            ><svg
+              class="icon icon-wave"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M3 16c2.4 3.2 4.8 3.2 7.2 0s4.8-3.2 7.2 0"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M3 10c2.4 3.2 4.8 3.2 7.2 0s4.8-3.2 7.2 0"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                opacity="0.65"
+              />
+            </svg>
+            Hey, I’m Deepak Dubey —</span
+          >
+          <span class="tagline"
+            >a builder, thinker, and engineer decoding the future with
+            code.</span
+          >
+        </h1>
+      </header>
 
-<link rel="icon" type="image/png" href="/favicon.png">
+      <section class="bio">
+        <p>
+          I’m a Computer Science grad turned Systems Thinker, currently building
+          real-time multiplayer &amp; Ai infra at
+          <a class="highlight" href="https://psyplay.io/">PsyPlay</a>.
+          <svg class="icon icon-star" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 3.2l2 4.7 5 .7-3.7 3.4.9 4.9L12 14.8l-4.2 2.1.9-4.9-3.7-3.4 5-.7z"
+              fill="currentColor"
+            />
+          </svg>
+          5+ years shipping production code |
+          <svg class="icon icon-burst" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 2.8l1.7 3.9 4.4-.6-2.7 3.2 3.3 2.9-4.3.5 1.3 4.1-3.7-2.3-3.7 2.3 1.3-4.1-4.3-.5 3.3-2.9-2.7-3.2 4.4.6z"
+              fill="currentColor"
+            />
+          </svg>
+          Obsessed with learning, design, and clarity.
+        </p>
+        <p>
+          I contribute to open- source, write thoughts, and pursue mastery — one
+          deep session at a time.
+        </p>
+        <p>
+          Fluent in English, Hindi, and Python. Learning German and Go. Read
+          my
+          <a class="highlight" href="https://gopal-blog.github.io/"
+            >Blog
+            <svg class="icon icon-wand" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M7 17l7.6-7.6 1.4 1.4L8.4 18.4z"
+                fill="currentColor"
+              />
+              <path
+                d="M16 5l.6-1.6.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6z"
+                fill="currentColor"
+              />
+            </svg> </a
+          >
+          or connect below.
+        </p>
+      </section>
 
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://gopalmai.github.io/">
-<meta property="og:title" content="Home">
-<meta property="og:description" content="Gopal's personal website">
-<meta property="og:image" content="https://avatars3.githubusercontent.com/u/51877647?s=240&amp;v=4">
+      <section class="panel">
+        <h2 class="panel-title">
+          <svg class="icon icon-lock" viewBox="0 0 24 24" aria-hidden="true">
+            <rect
+              x="5"
+              y="11"
+              width="14"
+              height="10"
+              rx="2"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <path
+              d="M9 11V8a3 3 0 0 1 6 0v3"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <circle cx="12" cy="16" r="1.6" fill="currentColor" />
+          </svg>
+          What I’m Building
+        </h2>
+        <ul class="panel-list">
+          <li><strong>PsyPlay</strong> – Multiplayer AI Gaming</li>
+          <li><strong>ResumeBuilder</strong> – ATS-optimized job prep</li>
+          <li>More in stealth…</li>
+        </ul>
+      </section>
 
-<meta property="twitter:card" content="summary">
-<meta property="twitter:url" content="https://gopalmani.github.io">
-<meta property="twitter:title" content="Home">
-<meta property="twitter:description" content="Gopal's personal website">
-<link rel="stylesheet" href="css/about.691f5bd5.css">
-<link rel="stylesheet" href="css/about.45367247.css">
+      <div class="panel-grid">
+        <section class="panel">
+          <h2 class="panel-title">
+            <svg class="icon icon-pen" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6 16.7 16.7 6a1.7 1.7 0 0 1 2.4 0l1.2 1.2a1.7 1.7 0 0 1 0 2.4L9.6 20.3l-4.6 1 1-4.6z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M14 7.8 16.2 10"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            Recent Tech I Use
+          </h2>
+          <ul class="panel-list">
+            <li>Go / <span>FastAPI</span> / Postgres</li>
+            <li>Redis / <span>WebSockets</span> / LangGraph</li>
+            <li><span>TypeScript</span> / Tailwind / Nextjs</li>
+            <li>Prometheus / Grafana / Loki</li>
+          </ul>
+        </section>
 
-</head>
+        <section class="panel">
+          <h2 class="panel-title">
+            <svg class="icon icon-bulb" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 3a6 6 0 0 1 4 10c-.7.7-1 1.6-1 2.5V17h-6v-1.5c0-.9-.3-1.8-1-2.5A6 6 0 0 1 12 3z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M10 21h4"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M9.5 17H14.5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            Things I Believe In
+          </h2>
+          <ul class="panel-list">
+            <li>Consistency &gt; Motivation</li>
+            <li>Feedback loops &gt; Deadlines</li>
+            <li>Truth &gt; Comfort</li>
+          </ul>
+        </section>
+      </div>
 
-<body>
-<div class="fixed inset-0 bg-slate-50 -z-10"></div>
-<main class="custom-scrollbar h-full max-w-[1920px] mx-auto">
-<div class="w-full h-full flex flex-col">
-<div class="flex-1 pt-0 md:pt-20">
-<main class="max-w-[1080px] my-0 mx-auto pt-8 px-4 pb-0 z-[2]">
-<section class="relative text-center justify-items-center grid-rows-[14rem_1fr] md:grid-rows-none gap-8 md:gap-4 items-center justify-center max-w-screen-lg mx-auto py-40">
-<div class="relative">
-<span class="text-2xl font-serif font-semibold text-zinc-700">Hi there! I'm..</span>
-<span class="relative block font-heading text-clamped-lg font-bold leading-relaxed text-zinc-800">
-Gopal Dubey Aka Deepak Dubey 
-</span>
-<p class="m-0 relative block font-serif text-clamped-sm mb-4 text-zinc-600 leading-loose">
-I'm a Computer Science graduate from VTU. Currently working as a SE II at Zepto. I'm all about contributing to open source projects and learning something new every day. I speak English
-and Hindi fluently, currently learning German. Head over to my <a href="https://gopal-blog.github.io" target="_blank"><u>Blog Site 🚀</u> </a>! and I will appreciate the feedbacks. Links to connect are below ⤸ Nice to meet ya! ツ
-</p>
-<div class="grid grid-cols-3 items-center justify-items-center max-w-[180px] mx-auto mb-8">
-<a class="text-slate-600 hover:text-slate-800" href="https://github.com/gopalmani" target="_blank" rel="norel noreferrer" aria-label="https://github.com/gopalmani">
-<svg viewBox="0 0 24 24" class="w-7 h-7 text-current" astro-icon="codicon:github"><path fill="currentColor" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm3.163 21.783h-.093a.513.513 0 0 1-.382-.14.513.513 0 0 1-.14-.372v-1.406c.006-.467.01-.94.01-1.416a3.693 3.693 0 0 0-.151-1.028 1.832 1.832 0 0 0-.542-.875 8.014 8.014 0 0 0 2.038-.471 4.051 4.051 0 0 0 1.466-.964c.407-.427.71-.943.885-1.506a6.77 6.77 0 0 0 .3-2.13 4.138 4.138 0 0 0-.26-1.476 3.892 3.892 0 0 0-.795-1.284 2.81 2.81 0 0 0 .162-.582c.033-.2.05-.402.05-.604 0-.26-.03-.52-.09-.773a5.309 5.309 0 0 0-.221-.763.293.293 0 0 0-.111-.02h-.11c-.23.002-.456.04-.674.111a5.34 5.34 0 0 0-.703.26 6.503 6.503 0 0 0-.661.343c-.215.127-.405.249-.573.362a9.578 9.578 0 0 0-5.143 0 13.507 13.507 0 0 0-.572-.362 6.022 6.022 0 0 0-.672-.342 4.516 4.516 0 0 0-.705-.261 2.203 2.203 0 0 0-.662-.111h-.11a.29.29 0 0 0-.11.02 5.844 5.844 0 0 0-.23.763c-.054.254-.08.513-.081.773 0 .202.017.404.051.604.033.199.086.394.16.582A3.888 3.888 0 0 0 5.702 10a4.142 4.142 0 0 0-.263 1.476 6.871 6.871 0 0 0 .292 2.12c.181.563.483 1.08.884 1.516.415.422.915.75 1.466.964.653.25 1.337.41 2.033.476a1.828 1.828 0 0 0-.452.633 2.99 2.99 0 0 0-.2.744 2.754 2.754 0 0 1-1.175.27 1.788 1.788 0 0 1-1.065-.3 2.904 2.904 0 0 1-.752-.824 3.1 3.1 0 0 0-.292-.382 2.693 2.693 0 0 0-.372-.343 1.841 1.841 0 0 0-.432-.24 1.2 1.2 0 0 0-.481-.101c-.04.001-.08.005-.12.01a.649.649 0 0 0-.162.02.408.408 0 0 0-.13.06.116.116 0 0 0-.06.1.33.33 0 0 0 .14.242c.093.074.17.131.232.171l.03.021c.133.103.261.214.382.333.112.098.213.209.3.33.09.119.168.246.231.381.073.134.15.288.231.463.188.474.522.875.954 1.145.453.243.961.364 1.476.351.174 0 .349-.01.522-.03.172-.028.343-.057.515-.091v1.743a.5.5 0 0 1-.533.521h-.062a10.286 10.286 0 1 1 6.324 0v.005z"></path></svg>
-</a><a class="text-slate-600 hover:text-slate-800" href="https://twitter.com/@_gopaldubey" target="_blank" rel="norel noreferrer" aria-label="https://twitter.com/@_gopaldubey">
-<svg viewBox="0 0 256 256" class="w-7 h-7 text-current" astro-icon="ph:twitter-logo-fill"><path fill="currentColor" d="m245.7 77.7-30.2 30.1c-6 69.9-65 124.2-135.5 124.2-14.5 0-26.5-2.3-35.6-6.8-7.3-3.7-10.3-7.6-11.1-8.8a8 8 0 0 1 3.9-11.9c.2-.1 23.8-9.1 39.1-26.4a108.6 108.6 0 0 1-24.7-24.4c-13.7-18.6-28.2-50.9-19.5-99.1a8.1 8.1 0 0 1 5.5-6.2 8 8 0 0 1 8.1 1.9c.3.4 33.6 33.2 74.3 43.8V88a48.3 48.3 0 0 1 48.6-48 48.2 48.2 0 0 1 41 24H240a8 8 0 0 1 7.4 4.9 8.4 8.4 0 0 1-1.7 8.8z"></path></svg>
-</a><a class="text-slate-600 hover:text-slate-800" href="mailto:gopalmanidubey@gmail.com" target="_blank" rel="norel noreferrer" aria-label="mailto:gopalmanidubey@gmail.com">
-<svg viewBox="0 0 24 24" class="w-7 h-7 text-current" astro-icon="ic:round-mail"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.25-6.54 4.09c-.65.41-1.47.41-2.12 0L4.4 8.25a.85.85 0 1 1 .9-1.44L12 11l6.7-4.19a.85.85 0 1 1 .9 1.44z"></path></svg>
-</a>
-</div>
-</div>
-</section>
+      <section class="panel">
+        <h2 class="panel-title">
+          <svg class="icon icon-bulb" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 3a6 6 0 0 1 4 10c-.7.7-1 1.6-1 2.5V17h-6v-1.5c0-.9-.3-1.8-1-2.5A6 6 0 0 1 12 3z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <path
+              d="M10 21h4"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M9.5 17H14.5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          Connect with Me
+        </h2>
+        <div class="social-links">
+          <a aria-label="GitHub" href="https://github.com/gopalmani">
+            <svg viewBox="0 0 24 24" role="img">
+              <path
+                d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.4.7-4.1-1.6-4.1-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.2 1.9 1.2 1.1 1.9 3 1.3 3.7 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6a4.7 4.7 0 0 1 1.3-3.3 4.3 4.3 0 0 1 .1-3.3s1-.3 3.4 1.3a11.7 11.7 0 0 1 6.2 0c2.4-1.6 3.4-1.3 3.4-1.3a4.3 4.3 0 0 1 .1 3.3 4.7 4.7 0 0 1 1.3 3.3c0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"
+              />
+            </svg>
+          </a>
+          <a aria-label="Twitter" href="https://x.com/deeep8o">
+            <svg viewBox="0 0 24 24" role="img">
+              <path
+                d="M21.5 6.5c-.7.3-1.4.5-2.1.6a3.6 3.6 0 0 0 1.6-2 7.2 7.2 0 0 1-2.3.9 3.6 3.6 0 0 0-6.1 3.3 10.3 10.3 0 0 1-7.4-3.7 3.6 3.6 0 0 0 1.1 4.8 3.5 3.5 0 0 1-1.6-.5v.1a3.6 3.6 0 0 0 2.9 3.6 3.6 3.6 0 0 1-1.6.1 3.6 3.6 0 0 0 3.4 2.6A7.2 7.2 0 0 1 3.5 18a10.1 10.1 0 0 0 5.5 1.6c6.7 0 10.3-5.6 10.3-10.3v-.5a7.3 7.3 0 0 0 1.8-1.8z"
+              />
+            </svg>
+          </a>
+          <a aria-label="LinkedIn" href="https://www.linkedin.com/in/gopal269/">
+            <svg viewBox="0 0 24 24" role="img">
+              <path
+                d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zm.02 4.8H2V21h3V8.3zm5 0H7V21h3v-6.7c0-1.8 2-2 2 0V21h3v-7.3c0-3.4-3.7-3.3-5-1.6V8.3z"
+              />
+            </svg>
+          </a>
+          <a aria-label="Blog" href="https://gopal-blog.github.io/">
+            <svg viewBox="0 0 24 24" role="img">
+              <path
+                d="M4 4h16a2 2 0 0 1 2 2v12c0 1.1-.9 2-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2zm0 2v12h16V6H4zm3 2h5v2H7V8zm0 4h10v2H7v-2zm0 4h8v2H7v-2z"
+              />
+            </svg>
+          </a>
+          <a aria-label="Email" href="mailto:gopalmanidubey@gmail.com">
+            <svg viewBox="0 0 24 24" role="img">
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2zm0 2v.5l8 5.2 8-5.2V6H4zm0 12h16V9l-8 5-8-5v9z"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
 
-
-</main>
-<span class="block text-center text-slate-500">Everything else is under construction :)</span>
-</div>
-</div>
-</main>
-<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon="{&quot;rayId&quot;:&quot;7f9de85bd8c71bd0&quot;,&quot;version&quot;:&quot;2023.8.0&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;0892766c36f74e558e76fdf44c1dfa3b&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
-</body>
+      <footer class="footer">
+        <p>
+          <svg class="icon icon-home" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M4 11.2 12 4l8 7.2V20a2 2 0 0 1-2 2h-4v-5h-4v5H6a2 2 0 0 1-2-2z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linejoin="round"
+            />
+          </svg>
+          You’ve reached the basement. I’m still wiring this part of my brain —
+          check back soon.
+        </p>
+      </footer>
+    </main>
+  </body>
 </html>

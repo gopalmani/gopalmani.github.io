@@ -104,12 +104,23 @@ class WebsiteTests(unittest.TestCase):
 
     def test_product_positioning_and_destinations(self):
         self.assertIn("Products Built", self.html)
-        for old_copy in ("Selected Work", "View Projects", "Selected Projects", "basement"):
+        for old_copy in ("Selected Work", "View Projects", "Selected Projects"):
             self.assertNotIn(old_copy, self.html)
         destinations = {href for _, href, _ in self.parser.links}
         for url in ("https://dayframehq.github.io/", "https://brahminbooking.com/",
                     "https://www.psyplay.io/", "https://github.com/gopalmani/QueryMindAI"):
             self.assertIn(url, destinations)
+
+    def test_featured_product_order(self):
+        products = re.findall(r'<article class="product">.*?<h3>([^<]+)', self.html)
+        self.assertEqual(products, ["Dayframe", "PsyPlay", "KRIPA", "BrahminBooking"])
+        self.assertIn('<strong>QueryMindAI</strong>', self.html)
+
+    def test_basement_precedes_credit_and_monogram_is_uppercase(self):
+        footer = self.html.split('<footer class="footer container">', 1)[1]
+        self.assertLess(footer.index('class="basement-line"'), footer.index('©'))
+        self.assertIn('You’ve reached the basement. I’m still wiring this part of my brain — check back soon.', footer)
+        self.assertIn('>D<span>/</span>', self.html)
 
     def test_local_script_and_image_sources_exist(self):
         for src in self.parser.assets:

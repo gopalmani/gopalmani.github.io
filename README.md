@@ -1,6 +1,6 @@
 # Deepak Dubey — Engineer & Product Builder
 
-A product-led personal portfolio: **Dayframe, BrahminBooking, PsyPlay, and QueryMindAI**, followed by open-source engineering, skills, contributions, and contact details.
+A product-led personal portfolio: **Dayframe, PsyPlay, KRIPA, and BrahminBooking**, followed by QueryMindAI and other work, skills, contributions, and contact details.
 
 **Live:** [gopalmani.github.io](https://gopalmani.github.io/)
 

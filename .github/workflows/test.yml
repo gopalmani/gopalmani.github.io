@@ -25,3 +25,11 @@ jobs:
 
       - name: Run website checks
         run: python -m unittest discover -s tests -v
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Test live clock
+        run: node --test tests/clock.test.cjs

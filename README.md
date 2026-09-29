@@ -1,166 +1,60 @@
-# Deepak Dubey — Personal Portfolio
+# Deepak Dubey — Engineer & Product Builder
 
-A lightweight engineering portfolio focused on backend systems, distributed pipelines, AI-powered developer tools, and production reliability.
+A product-led personal portfolio: **Dayframe, BrahminBooking, PsyPlay, and QueryMindAI**, followed by open-source engineering, skills, contributions, and contact details.
 
-Built as a small, dependency-free static site and designed for deployment through GitHub Pages.
+**Live:** [gopalmani.github.io](https://gopalmani.github.io/)
 
-**Live site:** [gopalmani.github.io](https://gopalmani.github.io/)
+## Design & implementation
 
-## Overview
+Semantic HTML, CSS, and a small vanilla-JavaScript clock. No framework, build step, package installation, or application backend. Geist and Instrument Serif are loaded from Google Fonts with system fallbacks.
 
-The portfolio presents:
+The restrained olive/charcoal palette, editorial typography, and original animated SVG workspace share a visual direction with the [GitHub profile](https://github.com/gopalmani). The supplied desk GIF was a mood reference; its artwork is not redistributed.
 
-- Professional background and engineering interests
-- Selected open-source projects
-- Engineering focus areas
-- Core technologies
-- Engineering principles
-- Contact and social links
+The scene's clock reads the visitor's device clock, formats it in `Asia/Kolkata`, and refreshes every second while the tab is visible. It refreshes immediately when the tab becomes visible again. It does not claim server-synchronized time. With JavaScript disabled, it displays `IST`, never a fabricated time. Reduced-motion preferences disable decorative animations without freezing the actual clock.
 
-The design follows a restrained editorial style with strong typography, subtle interaction states, and responsive layouts rather than a dashboard or résumé-template presentation.
+GitHub README images cannot execute JavaScript and may be cached by GitHub. The profile therefore links an animated SVG preview to this live clock instead of displaying a stale time as current. No scheduled timestamp commits, image-generation service, or additional credentials are needed.
 
-## Technology
+## Local preview
 
-- Semantic HTML5
-- Modern CSS
-- [Inter](https://fonts.google.com/specimen/Inter) for body copy
-- [Sora](https://fonts.google.com/specimen/Sora) for headings and labels
-- No JavaScript framework
-- No build process
-- No runtime dependencies
-
-## Project Structure
-
-```text
-.
-├── .github/workflows/test.yml  # Pull request and push checks
-├── tests/test_site.py          # Dependency-free website tests
-├── index.html                  # Page content and semantic structure
-├── style.css                   # Theme, layout, and interactions
-├── favicon.svg                 # Browser icon source
-├── CONTRIBUTING.md             # Contribution guidelines
-└── LICENSE                     # MIT license
-```
-
-## Running Locally
-
-The site can be opened directly from `index.html`. For a more representative local environment, serve the directory with any static HTTP server.
-
-Using Python:
-
-```bash
+```sh
 python3 -m http.server 8000
 ```
 
-Then open [http://localhost:8000](http://localhost:8000).
+Open `http://localhost:8000`.
 
-## Use This Website as a Template
+## Verification
 
-You are welcome to reuse and customize this portfolio under the MIT License.
-
-### GitHub template method
-
-1. Open this repository on GitHub.
-2. Select **Use this template → Create a new repository**. If the button is not
-   visible, the repository owner must first enable **Template repository** under
-   **Settings → General**.
-3. Clone your new repository.
-4. Replace Deepak's name, biography, projects, links, email address, and social
-   profiles in `index.html`.
-5. Update the colors and typography variables in `style.css`.
-6. Replace the `D/` text and favicon files with your own branding.
-7. Update this README and retain the original MIT license notice.
-8. Enable GitHub Pages under **Settings → Pages**.
-
-### Fork or clone method
-
-Fork the repository on GitHub, or make a fresh local copy:
-
-```bash
-git clone https://github.com/gopalmani/gopalmani.github.io.git my-portfolio
-cd my-portfolio
-rm -rf .git
-git init
-```
-
-The `rm -rf .git` command only removes the copied repository history; run it
-inside the newly cloned `my-portfolio` directory.
-
-## Testing
-
-Run the same checks used for pushes and pull requests:
-
-```bash
+```sh
 python3 -m unittest discover -s tests -v
+node --test tests/clock.test.cjs
 ```
 
-The test suite validates key assets and metadata, internal anchors, local file
-references, unique IDs, safe new-tab links, and balanced CSS braces. GitHub
-Actions runs it automatically through `.github/workflows/test.yml`.
+Tests cover local assets, anchors, unique IDs, product links, metadata, accessibility hooks, valid SVG, clock timezone conversion across midnight, ticking, and hidden-tab recovery. CI runs the same checks. Before publishing, also inspect desktop/mobile layouts, keyboard focus, reduced motion, and the external activity image.
 
-## Contributing
+## Files
 
-Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before
-opening an issue or pull request.
-
-Using Node.js:
-
-```bash
-npx serve .
+```text
+index.html                    Product narrative and semantic page structure
+style.css                     Responsive layout, typography, accessible states
+site.js                       Live India-time clock
+assets/studio.svg             Original, self-contained animated illustration
+tests/test_site.py            Static content and asset checks
+tests/clock.test.cjs           Dependency-free clock behavior tests
+.github/workflows/test.yml    CI checks
 ```
 
-## Design and Accessibility
+## Content & external services
 
-The implementation includes:
+- Keep product claims grounded in implemented capabilities; do not invent adoption or performance figures.
+- Dayframe's verified address is `https://dayframehq.github.io/`, not `dayframe.github.io`.
+- GitHub activity is provided by OSS Insight and may lag; the image links to GitHub's current contribution view.
+- Profile views remain on the GitHub profile via the existing Komarev provider.
+- Google Fonts and OSS Insight receive normal browser requests. This portfolio adds no analytics, tracking scripts, cookies, contact-form backend, or stored visitor data.
 
-- Responsive layouts for mobile, tablet, and desktop screens
-- Fluid typography using `clamp()`
-- Semantic landmarks and heading hierarchy
-- A keyboard-accessible skip link
-- Visible `:focus-visible` states
-- Descriptive labels for external links
-- Reduced-motion support
-- Sufficient text contrast against the dark theme
-- Secure external links using `rel="noopener noreferrer"`
+## Publish
 
-## Customization
+GitHub Pages publishes `main` from the repository root. Run checks before merging to `main`, then verify the Pages deployment and live site. Updating the separate `gopalmani/gopalmani` repository publishes the GitHub profile README automatically.
 
-Most visual settings are defined as custom properties near the top of `style.css`:
+## Reuse
 
-```css
-:root {
-  --background: #0b0d10;
-  --surface: #12161b;
-  --surface-hover: #181d24;
-  --text: #f4f6f8;
-  --muted: #9da7b3;
-  --border: rgba(255, 255, 255, 0.09);
-  --accent: #8b9cff;
-}
-```
-
-Portfolio copy, project information, and links can be edited directly in `index.html`.
-
-## Deployment
-
-This repository is compatible with GitHub Pages without compilation or additional configuration.
-
-1. Push the site files to the repository's publishing branch.
-2. Open **Settings → Pages** in GitHub.
-3. Select **Deploy from a branch** as the source.
-4. Choose the publishing branch and the repository root (`/`).
-
-GitHub Pages will publish the site after the deployment workflow completes.
-
-## Contact
-
-- [GitHub](https://github.com/gopalmani)
-- [LinkedIn](https://www.linkedin.com/in/gopal269/)
-- [Blog](https://gopal-blog.github.io/)
-- [X](https://x.com/deeep8o)
-- [Email](mailto:gopalmanidubey@gmail.com)
-
-## License
-
-Licensed under the [MIT License](LICENSE). You may copy, modify, and distribute
-the site while preserving the copyright and license notice.
+Reuse is welcome under the [MIT License](LICENSE). Replace names, product descriptions, contact details, external activity URLs, and favicon assets with your own. See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidance.

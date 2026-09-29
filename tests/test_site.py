@@ -14,6 +14,7 @@ class SiteParser(HTMLParser):
         self.ids = []
         self.links = []
         self.meta = []
+        self.assets = []
         self.title = ""
         self._in_title = False
 
@@ -25,6 +26,8 @@ class SiteParser(HTMLParser):
             self.links.append((tag, attributes["href"], attributes))
         if tag == "meta":
             self.meta.append(attributes)
+        if tag in {"img", "script"} and "src" in attributes:
+            self.assets.append(attributes["src"])
         if tag == "title":
             self._in_title = True
 
@@ -52,6 +55,8 @@ class WebsiteTests(unittest.TestCase):
             "favicon.svg",
             "favicon.ico",
             "apple-touch-icon.png",
+            "site.js",
+            "assets/studio.svg",
         ]
         for relative_path in required:
             path = ROOT / relative_path
@@ -96,6 +101,41 @@ class WebsiteTests(unittest.TestCase):
     def test_css_braces_are_balanced(self):
         css_without_comments = re.sub(r"/\*.*?\*/", "", self.css, flags=re.S)
         self.assertEqual(css_without_comments.count("{"), css_without_comments.count("}"))
+
+    def test_product_positioning_and_destinations(self):
+        self.assertIn("Products Built", self.html)
+        for old_copy in ("Selected Work", "View Projects", "Selected Projects", "basement"):
+            self.assertNotIn(old_copy, self.html)
+        destinations = {href for _, href, _ in self.parser.links}
+        for url in ("https://dayframehq.github.io/", "https://brahminbooking.com/",
+                    "https://www.psyplay.io/", "https://github.com/gopalmani/QueryMindAI"):
+            self.assertIn(url, destinations)
+
+    def test_local_script_and_image_sources_exist(self):
+        for src in self.parser.assets:
+            if not urlparse(src).scheme:
+                self.assertTrue((ROOT / src).is_file(), src)
+
+    def test_clock_fallback_is_not_a_fake_time(self):
+        self.assertIn('<time id="india-clock">IST</time>', self.html)
+        self.assertNotIn('aria-live="polite"', self.html)
+
+    def test_metadata_and_accessibility(self):
+        self.assertIn('rel="canonical"', self.html)
+        self.assertIn('property="og:title"', self.html)
+        self.assertIn('class="skip-link"', self.html)
+        self.assertIn("prefers-reduced-motion", self.css)
+        self.assertIn(":focus-visible", self.css)
+
+    def test_workshop_is_self_contained_valid_svg(self):
+        import xml.etree.ElementTree as ET
+        scene = ROOT / "assets/studio.svg"
+        root = ET.parse(scene).getroot()
+        self.assertTrue(root.tag.endswith("svg"))
+        source = scene.read_text()
+        self.assertNotIn("<script", source)
+        self.assertNotIn("<image", source)
+        self.assertIn("prefers-reduced-motion", source)
 
 
 if __name__ == "__main__":
